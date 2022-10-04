@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GalleryItemsController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -20,9 +21,7 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/gallery', function () {
-    return Inertia::render('Gallery');
-});
+Route::get('/gallery', [GalleryItemsController::class, 'index']);
 
 Route::post('/logout', function () {
     dd(request('foo'));

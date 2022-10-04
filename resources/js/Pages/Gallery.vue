@@ -1,14 +1,22 @@
 <template>
-    <h1 class="text-4xl font-bold">Gallery</h1>
-
-    <Nav />
+    <Layout>
+        <PageHeader>Gallery</PageHeader>
+        <section class="grid grid-cols-3 gap-8">
+            <GalleryItem v-for="item in items" :key="item.id" :item="item" />
+        </section>
+    </Layout>
 </template>
 
 <script>
-    import Nav from '../Shared/Nav';
+    import Layout from '../Shared/Layout';
+    import PageHeader from '../Shared/PageHeader'
+    import GalleryItem from '../Components/GalleryItem.vue';
 
     export default {
-        props: {},
-        components: { Nav }
+        components: { Layout, PageHeader, GalleryItem },
+
+        props: {
+            items: Array
+        },
     };
 </script>

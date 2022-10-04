@@ -1,22 +1,14 @@
 <template>
-    <h1 class="text-4xl font-bold">Hello!</h1>
-
-    <Nav />
-
-    <div style="margin-top: 900px">
-        <p>The current time is {{ time }}.</p>
-    </div>
+    <Layout>
+        <PageHeader>Hello!</PageHeader>
+    </Layout>
 </template>
 
 <script>
-    import Nav from '../Shared/Nav';
-    import { Link } from '@inertiajs/inertia-vue3';
+    import Layout from '../Shared/Layout';
+    import PageHeader from '../Shared/PageHeader';
 
     export default {
-        components: { Nav, Link },
-
-        props: {
-            time: String
-        }
+        components: { Layout, PageHeader },
     };
 </script>
