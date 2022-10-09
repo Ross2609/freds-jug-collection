@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\GalleryItem;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
+use League\Flysystem\StorageAttributes;
 
 class GalleryItemsController extends Controller
 {
@@ -15,7 +17,12 @@ class GalleryItemsController extends Controller
      */
     public function index(GalleryItem $galleryItem)
     {
-        $galleryItems = $galleryItem->getAll();
+        $galleryItems = collect($galleryItem->getAll());
+
+        $galleryItems = $galleryItems->map(function ($galleryItem) {
+            $galleryItem['img_url'] = config('collection.collection_url') . '/' . $galleryItem['img_name'];
+            return $galleryItem;
+        })->toArray();
 
         return Inertia::render('Gallery', [
             'items' => $galleryItems

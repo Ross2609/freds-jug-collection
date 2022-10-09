@@ -1,14 +1,15 @@
 <template>
     <div class="border rounded-lg my-3 flex flex-col place-items-center">
-        <img src="" alt="jug.jpg" class="w-32 h-32 m-2 border border-gray-200">
-        <p class="mt-5">{{ item.name }}</p>
+        <img :src="item.img_url" :alt="item.img_name" class="w-44 m-2 border border-gray-200 object-cover border rounded mt-4">
+        <p class="mt-5 text-center mb-3" style="font-family: Verdana">{{ item.name }}</p>
     </div>
 </template>
 
 <script>
-    export default {
-        props: {
-            item: Object
-        }
-    }
+export default {
+
+    props: {
+        item: Object
+    },
+}
 </script>

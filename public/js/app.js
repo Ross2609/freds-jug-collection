@@ -15382,20 +15382,21 @@ __webpack_require__.r(__webpack_exports__);
 var _hoisted_1 = {
   "class": "border rounded-lg my-3 flex flex-col place-items-center"
 };
-
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-  src: "",
-  alt: "jug.jpg",
-  "class": "w-32 h-32 m-2 border border-gray-200"
-}, null, -1
-/* HOISTED */
-);
-
+var _hoisted_2 = ["src", "alt"];
 var _hoisted_3 = {
-  "class": "mt-5"
+  "class": "mt-5 text-center mb-3",
+  style: {
+    "font-family": "Verdana"
+  }
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.item.name), 1
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+    src: $props.item.img_url,
+    alt: $props.item.img_name,
+    "class": "w-44 m-2 border border-gray-200 object-cover border rounded mt-4"
+  }, null, 8
+  /* PROPS */
+  , _hoisted_2), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.item.name), 1
   /* TEXT */
   )]);
 }
@@ -15419,7 +15420,7 @@ __webpack_require__.r(__webpack_exports__);
 var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Gallery");
 
 var _hoisted_2 = {
-  "class": "grid grid-cols-3 gap-8"
+  "class": "grid grid-cols-5 gap-8"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_PageHeader = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("PageHeader");
@@ -15526,7 +15527,7 @@ var _hoisted_4 = {
   "class": "p-6"
 };
 var _hoisted_5 = {
-  "class": "max-w-4xl mx-auto"
+  "class": "max-w-7xl mx-auto"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Nav = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Nav");
